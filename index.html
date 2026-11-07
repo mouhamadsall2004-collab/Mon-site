@@ -1,0 +1,852 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Dessert Shop</title>
+
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+
+    <!-- =====================================
+         HEADER
+    ====================================== -->
+
+    <header class="header">
+
+        <div class="header-container">
+
+            <div class="identite">
+
+                <img
+                    src="assets/images/logo.png"
+                    alt="Logo Dessert Shop"
+                    class="logo"
+                >
+
+                <h1>Dessert Shop</h1>
+
+            </div>
+
+
+            <button
+                type="button"
+                id="btn-panier-header"
+                class="btn-panier-header"
+            >
+
+                <!-- ICONE PANIER -->
+
+                <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="21"
+                    height="20"
+                    viewBox="0 0 21 20"
+                    fill="none"
+                >
+
+                    <path
+                        fill="currentColor"
+                        d="M6.583 18.75a1.25 1.25 0 1 0 0-2.5 1.25 1.25 0 0 0 0 2.5ZM15.334 18.75a1.25 1.25 0 1 0 0-2.5 1.25 1.25 0 0 0 0 2.5ZM3.446 1.752a.625.625 0 0 0-.613-.502h-2.5V2.5h1.988l2.4 11.998a.625.625 0 0 0 .612.502h11.25v-1.25H5.847l-.5-2.5h11.238a.625.625 0 0 0 .61-.49l1.417-6.385a.625.625 0 0 0-.61-.76H4.062l-.616-3.063Z"
+                    />
+
+                </svg>
+
+                <span>Panier</span>
+
+                <span id="compteur-panier">
+                    0
+                </span>
+
+            </button>
+
+        </div>
+
+    </header>
+
+
+    <!-- =====================================
+         CONTENU PRINCIPAL
+    ====================================== -->
+
+    <main>
+
+        <!-- =================================
+             SECTION PRODUITS
+        ================================== -->
+
+        <section id="section-produits">
+
+            <div class="titre-section">
+
+                <p>Bienvenue chez</p>
+
+                <h2>
+                    Nos délicieux desserts
+                </h2>
+
+                <span>
+                    Choisissez votre dessert préféré
+                </span>
+
+            </div>
+
+
+            <div id="app-produits">
+
+
+                <!-- =========================
+                     PRODUIT 1
+                ========================== -->
+
+                <article
+                    class="un-produit"
+                    data-nom="Gaufre aux fruits rouges"
+                    data-prix="10000"
+                    data-categorie="Gaufre"
+                >
+
+                    <img
+                        src="assets/images/image-waffle-mobile.jpg"
+                        alt="Gaufre aux fruits rouges"
+                        class="produits-image"
+                    >
+
+                    <div class="produits-details">
+
+                        <span class="produits-categories">
+                            Gaufre
+                        </span>
+
+                        <h3 class="produits-nom">
+                            Gaufre aux fruits rouges
+                        </h3>
+
+                        <p class="produits-prix">
+                            10.000 FCFA
+                        </p>
+
+                        <button
+                            type="button"
+                            class="btn-ajouter-panier"
+                        >
+
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="21"
+                                height="20"
+                                viewBox="0 0 21 20"
+                                fill="none"
+                            >
+
+                                <path
+                                    fill="currentColor"
+                                    d="M6.583 18.75a1.25 1.25 0 1 0 0-2.5 1.25 1.25 0 0 0 0 2.5ZM15.334 18.75a1.25 1.25 0 1 0 0-2.5 1.25 1.25 0 0 0 0 2.5ZM3.446 1.752a.625.625 0 0 0-.613-.502h-2.5V2.5h1.988l2.4 11.998a.625.625 0 0 0 .612.502h11.25v-1.25H5.847l-.5-2.5h11.238a.625.625 0 0 0 .61-.49l1.417-6.385a.625.625 0 0 0-.61-.76H4.062l-.616-3.063Z"
+                                />
+
+                            </svg>
+
+                            <span>
+                                Ajouter au panier
+                            </span>
+
+                        </button>
+
+                    </div>
+
+                </article>
+
+
+                <!-- =========================
+                     PRODUIT 2
+                ========================== -->
+
+                <article
+                    class="un-produit"
+                    data-nom="Crème Brûlée à la vanille"
+                    data-prix="8000"
+                    data-categorie="Crème Brûlée"
+                >
+
+                    <img
+                        src="assets/images/image-creme-brulee-desktop.jpg"
+                        alt="Crème Brûlée à la vanille"
+                        class="produits-image"
+                    >
+
+                    <div class="produits-details">
+
+                        <span class="produits-categories">
+                            Crème Brûlée
+                        </span>
+
+                        <h3 class="produits-nom">
+                            Crème Brûlée à la vanille
+                        </h3>
+
+                        <p class="produits-prix">
+                            8.000 FCFA
+                        </p>
+
+                        <button
+                            type="button"
+                            class="btn-ajouter-panier"
+                        >
+
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="21"
+                                height="20"
+                                viewBox="0 0 21 20"
+                                fill="none"
+                            >
+
+                                <path
+                                    fill="currentColor"
+                                    d="M6.583 18.75a1.25 1.25 0 1 0 0-2.5 1.25 1.25 0 0 0 0-2.5ZM15.334 18.75a1.25 1.25 0 1 0 0-2.5 1.25 1.25 0 0 0 0-2.5ZM3.446 1.752a.625.625 0 0 0-.613-.502h-2.5V2.5h1.988l2.4 11.998a.625.625 0 0 0 .612.502h11.25v-1.25H5.847l-.5-2.5h11.238a.625.625 0 0 0 .61-.49l1.417-6.385a.625.625 0 0 0-.61-.76H4.062l-.616-3.063Z"
+                                />
+
+                            </svg>
+
+                            <span>
+                                Ajouter au panier
+                            </span>
+
+                        </button>
+
+                    </div>
+
+                </article>
+
+
+                <!-- =========================
+                     PRODUIT 3
+                ========================== -->
+
+                <article
+                    class="un-produit"
+                    data-nom="Assortiment de cinq macarons"
+                    data-prix="8000"
+                    data-categorie="Macarons"
+                >
+
+                    <img
+                        src="assets/images/image-macaron-desktop.jpg"
+                        alt="Assortiment de macarons"
+                        class="produits-image"
+                    >
+
+                    <div class="produits-details">
+
+                        <span class="produits-categories">
+                            Macarons
+                        </span>
+
+                        <h3 class="produits-nom">
+                            Assortiment de cinq macarons
+                        </h3>
+
+                        <p class="produits-prix">
+                            8.000 FCFA
+                        </p>
+
+                        <button
+                            type="button"
+                            class="btn-ajouter-panier"
+                        >
+
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="21"
+                                height="20"
+                                viewBox="0 0 21 20"
+                                fill="none"
+                            >
+
+                                <path
+                                    fill="currentColor"
+                                    d="M6.583 18.75a1.25 1.25 0 1 0 0-2.5 1.25 1.25 0 0 0 0-2.5ZM15.334 18.75a1.25 1.25 0 1 0 0-2.5 1.25 1.25 0 0 0 0-2.5ZM3.446 1.752a.625.625 0 0 0-.613-.502h-2.5V2.5h1.988l2.4 11.998a.625.625 0 0 0 .612.502h11.25v-1.25H5.847l-.5-2.5h11.238a.625.625 0 0 0 .61-.49l1.417-6.385a.625.625 0 0 0-.61-.76H4.062l-.616-3.063Z"
+                                />
+
+                            </svg>
+
+                            <span>
+                                Ajouter au panier
+                            </span>
+
+                        </button>
+
+                    </div>
+
+                </article>
+
+
+                <!-- =========================
+                     PRODUIT 4
+                ========================== -->
+
+                <article
+                    class="un-produit"
+                    data-nom="Tiramisu classique"
+                    data-prix="5500"
+                    data-categorie="Tiramisu"
+                >
+
+                    <img
+                        src="assets/images/image-tiramisu-desktop.jpg"
+                        alt="Tiramisu classique"
+                        class="produits-image"
+                    >
+
+                    <div class="produits-details">
+
+                        <span class="produits-categories">
+                            Tiramisu
+                        </span>
+
+                        <h3 class="produits-nom">
+                            Tiramisu classique
+                        </h3>
+
+                        <p class="produits-prix">
+                            5.500 FCFA
+                        </p>
+
+                        <button
+                            type="button"
+                            class="btn-ajouter-panier"
+                        >
+
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="21"
+                                height="20"
+                                viewBox="0 0 21 20"
+                                fill="none"
+                            >
+
+                                <path
+                                    fill="currentColor"
+                                    d="M6.583 18.75a1.25 1.25 0 1 0 0-2.5 1.25 1.25 0 0 0 0-2.5ZM15.334 18.75a1.25 1.25 0 1 0 0-2.5 1.25 1.25 0 0 0 0-2.5ZM3.446 1.752a.625.625 0 0 0-.613-.502h-2.5V2.5h1.988l2.4 11.998a.625.625 0 0 0 .612.502h11.25v-1.25H5.847l-.5-2.5h11.238a.625.625 0 0 0 .61-.49l1.417-6.385a.625.625 0 0 0-.61-.76H4.062l-.616-3.063Z"
+                                />
+
+                            </svg>
+
+                            <span>
+                                Ajouter au panier
+                            </span>
+
+                        </button>
+
+                    </div>
+
+                </article>
+
+
+                <!-- =========================
+                     PRODUIT 5
+                ========================== -->
+
+                <article
+                    class="un-produit"
+                    data-nom="Baklava aux pistaches"
+                    data-prix="4000"
+                    data-categorie="Baklava"
+                >
+
+                    <img
+                        src="assets/images/image-baklava-desktop.jpg"
+                        alt="Baklava aux pistaches"
+                        class="produits-image"
+                    >
+
+                    <div class="produits-details">
+
+                        <span class="produits-categories">
+                            Baklava
+                        </span>
+
+                        <h3 class="produits-nom">
+                            Baklava aux pistaches
+                        </h3>
+
+                        <p class="produits-prix">
+                            4.000 FCFA
+                        </p>
+
+                        <button
+                            type="button"
+                            class="btn-ajouter-panier"
+                        >
+
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="21"
+                                height="20"
+                                viewBox="0 0 21 20"
+                                fill="none"
+                            >
+
+                                <path
+                                    fill="currentColor"
+                                    d="M6.583 18.75a1.25 1.25 0 1 0 0-2.5 1.25 1.25 0 0 0 0-2.5ZM15.334 18.75a1.25 1.25 0 1 0 0-2.5 1.25 1.25 0 0 0 0-2.5ZM3.446 1.752a.625.625 0 0 0-.613-.502h-2.5V2.5h1.988l2.4 11.998a.625.625 0 0 0 .612.502h11.25v-1.25H5.847l-.5-2.5h11.238a.625.625 0 0 0 .61-.49l1.417-6.385a.625.625 0 0 0-.61-.76H4.062l-.616-3.063Z"
+                                />
+
+                            </svg>
+
+                            <span>
+                                Ajouter au panier
+                            </span>
+
+                        </button>
+
+                    </div>
+
+                </article>
+
+
+                <!-- =========================
+                     PRODUIT 6
+                ========================== -->
+
+                <article
+                    class="un-produit"
+                    data-nom="Tarte au citron meringuée"
+                    data-prix="5000"
+                    data-categorie="Tarte"
+                >
+
+                    <img
+                        src="assets/images/image-meringue-desktop.jpg"
+                        alt="Tarte au citron meringuée"
+                        class="produits-image"
+                    >
+
+                    <div class="produits-details">
+
+                        <span class="produits-categories">
+                            Tarte
+                        </span>
+
+                        <h3 class="produits-nom">
+                            Tarte au citron meringuée
+                        </h3>
+
+                        <p class="produits-prix">
+                            5.000 FCFA
+                        </p>
+
+                        <button
+                            type="button"
+                            class="btn-ajouter-panier"
+                        >
+
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="21"
+                                height="20"
+                                viewBox="0 0 21 20"
+                                fill="none"
+                            >
+
+                                <path
+                                    fill="currentColor"
+                                    d="M6.583 18.75a1.25 1.25 0 1 0 0-2.5 1.25 1.25 0 0 0 0-2.5ZM15.334 18.75a1.25 1.25 0 1 0 0-2.5 1.25 1.25 0 0 0 0-2.5ZM3.446 1.752a.625.625 0 0 0-.613-.502h-2.5V2.5h1.988l2.4 11.998a.625.625 0 0 0 .612.502h11.25v-1.25H5.847l-.5-2.5h11.238a.625.625 0 0 0 .61-.49l1.417-6.385a.625.625 0 0 0-.61-.76H4.062l-.616-3.063Z"
+                                />
+
+                            </svg>
+
+                            <span>
+                                Ajouter au panier
+                            </span>
+
+                        </button>
+
+                    </div>
+
+                </article>
+
+
+                <!-- =========================
+                     PRODUIT 7
+                ========================== -->
+
+                <article
+                    class="un-produit"
+                    data-nom="Gâteau de velours rouge"
+                    data-prix="4500"
+                    data-categorie="Gâteau"
+                >
+
+                    <img
+                        src="assets/images/image-cake-desktop.jpg"
+                        alt="Gâteau de velours rouge"
+                        class="produits-image"
+                    >
+
+                    <div class="produits-details">
+
+                        <span class="produits-categories">
+                            Gâteau
+                        </span>
+
+                        <h3 class="produits-nom">
+                            Gâteau de velours rouge
+                        </h3>
+
+                        <p class="produits-prix">
+                            4.500 FCFA
+                        </p>
+
+                        <button
+                            type="button"
+                            class="btn-ajouter-panier"
+                        >
+
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="21"
+                                height="20"
+                                viewBox="0 0 21 20"
+                                fill="none"
+                            >
+
+                                <path
+                                    fill="currentColor"
+                                    d="M6.583 18.75a1.25 1.25 0 1 0 0-2.5 1.25 1.25 0 0 0 0-2.5ZM15.334 18.75a1.25 1.25 0 1 0 0-2.5 1.25 1.25 0 0 0 0-2.5ZM3.446 1.752a.625.625 0 0 0-.613-.502h-2.5V2.5h1.988l2.4 11.998a.625.625 0 0 0 .612.502h11.25v-1.25H5.847l-.5-2.5h11.238a.625.625 0 0 0 .61-.49l1.417-6.385a.625.625 0 0 0-.61-.76H4.062l-.616-3.063Z"
+                                />
+
+                            </svg>
+
+                            <span>
+                                Ajouter au panier
+                            </span>
+
+                        </button>
+
+                    </div>
+
+                </article>
+
+
+                <!-- =========================
+                     PRODUIT 8
+                ========================== -->
+
+                <article
+                    class="un-produit"
+                    data-nom="Brownie au caramel salé"
+                    data-prix="5500"
+                    data-categorie="Brownie"
+                >
+
+                    <img
+                        src="assets/images/image-brownie-desktop.jpg"
+                        alt="Brownie au caramel salé"
+                        class="produits-image"
+                    >
+
+                    <div class="produits-details">
+
+                        <span class="produits-categories">
+                            Brownie
+                        </span>
+
+                        <h3 class="produits-nom">
+                            Brownie au caramel salé
+                        </h3>
+
+                        <p class="produits-prix">
+                            5.500 FCFA
+                        </p>
+
+                        <button
+                            type="button"
+                            class="btn-ajouter-panier"
+                        >
+
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="21"
+                                height="20"
+                                viewBox="0 0 21 20"
+                                fill="none"
+                            >
+
+                                <path
+                                    fill="currentColor"
+                                    d="M6.583 18.75a1.25 1.25 0 1 0 0-2.5 1.25 1.25 0 0 0 0-2.5ZM15.334 18.75a1.25 1.25 0 1 0 0-2.5 1.25 1.25 0 0 0 0-2.5ZM3.446 1.752a.625.625 0 0 0-.613-.502h-2.5V2.5h1.988l2.4 11.998a.625.625 0 0 0 .612.502h11.25v-1.25H5.847l-.5-2.5h11.238a.625.625 0 0 0 .61-.49l1.417-6.385a.625.625 0 0 0-.61-.76H4.062l-.616-3.063Z"
+                                />
+
+                            </svg>
+
+                            <span>
+                                Ajouter au panier
+                            </span>
+
+                        </button>
+
+                    </div>
+
+                </article>
+
+
+                <!-- =========================
+                     PRODUIT 9
+                ========================== -->
+
+                <article
+                    class="un-produit"
+                    data-nom="Panna Cotta à la vanille"
+                    data-prix="10000"
+                    data-categorie="Panna Cotta"
+                >
+
+                    <img
+                        src="assets/images/image-panna-cotta-desktop.jpg"
+                        alt="Panna Cotta à la vanille"
+                        class="produits-image"
+                    >
+
+                    <div class="produits-details">
+
+                        <span class="produits-categories">
+                            Panna Cotta
+                        </span>
+
+                        <h3 class="produits-nom">
+                            Panna Cotta à la vanille
+                        </h3>
+
+                        <p class="produits-prix">
+                            10.000 FCFA
+                        </p>
+
+                        <button
+                            type="button"
+                            class="btn-ajouter-panier"
+                        >
+
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="21"
+                                height="20"
+                                viewBox="0 0 21 20"
+                                fill="none"
+                            >
+
+                                <path
+                                    fill="currentColor"
+                                    d="M6.583 18.75a1.25 1.25 0 1 0 0-2.5 1.25 1.25 0 0 0 0-2.5ZM15.334 18.75a1.25 1.25 0 1 0 0-2.5 1.25 1.25 0 0 0 0-2.5ZM3.446 1.752a.625.625 0 0 0-.613-.502h-2.5V2.5h1.988l2.4 11.998a.625.625 0 0 0 .612.502h11.25v-1.25H5.847l-.5-2.5h11.238a.625.625 0 0 0 .61-.49l1.417-6.385a.625.625 0 0 0-.61-.76H4.062l-.616-3.063Z"
+                                />
+
+                            </svg>
+
+                            <span>
+                                Ajouter au panier
+                            </span>
+
+                        </button>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================
+             PANIER
+        ================================== -->
+
+        <aside
+            id="section-panier"
+            class="section-panier"
+        >
+
+            <div class="panier-header">
+
+                <h2>
+
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 21 20"
+                        fill="none"
+                    >
+
+                        <path
+                            fill="#f891a6"
+                            d="M6.583 18.75a1.25 1.25 0 1 0 0-2.5 1.25 1.25 0 0 0 0 2.5ZM15.334 18.75a1.25 1.25 0 1 0 0-2.5 1.25 1.25 0 0 0 0-2.5ZM3.446 1.752a.625.625 0 0 0-.613-.502h-2.5V2.5h1.988l2.4 11.998a.625.625 0 0 0 .612.502h11.25v-1.25H5.847l-.5-2.5h11.238a.625.625 0 0 0 .61-.49l1.417-6.385a.625.625 0 0 0-.61-.76H4.062l-.616-3.063Z"
+                        />
+
+                    </svg>
+
+                    Votre panier
+
+                </h2>
+
+
+                <span id="nombre-panier">
+                    0 article
+                </span>
+
+            </div>
+
+
+            <div
+                id="contenu-panier"
+                class="contenu-panier"
+            >
+
+                <div class="panier-vide">
+
+                    <div class="icone-panier">
+
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="45"
+                            height="45"
+                            viewBox="0 0 21 20"
+                            fill="none"
+                        >
+
+                            <path
+                                fill="#f891a6"
+                                d="M6.583 18.75a1.25 1.25 0 1 0 0-2.5 1.25 1.25 0 0 0 0 2.5ZM15.334 18.75a1.25 1.25 0 1 0 0-2.5 1.25 1.25 0 0 0 0-2.5ZM3.446 1.752a.625.625 0 0 0-.613-.502h-2.5V2.5h1.988l2.4 11.998a.625.625 0 0 0 .612.502h11.25v-1.25H5.847l-.5-2.5h11.238a.625.625 0 0 0 .61-.49l1.417-6.385a.625.625 0 0 0-.61-.76H4.062l-.616-3.063Z"
+                            />
+
+                        </svg>
+
+                    </div>
+
+                    <h3>
+                        Votre panier est vide
+                    </h3>
+
+                    <p>
+                        Ajoutez vos desserts préférés.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="panier-resume">
+
+                <div class="ligne-total">
+
+                    <span>
+                        Total
+                    </span>
+
+                    <strong id="total-panier">
+                        0 FCFA
+                    </strong>
+
+                </div>
+
+
+                <button
+                    type="button"
+                    id="btn-commander"
+                    class="btn-commander"
+                    disabled
+                >
+                    Commander
+                </button>
+
+
+                <button
+                    type="button"
+                    id="btn-vider"
+                    class="btn-vider"
+                    disabled
+                >
+                    Vider le panier
+                </button>
+
+            </div>
+
+        </aside>
+
+    </main>
+
+
+    <!-- =====================================
+         FOOTER SIMPLE ROSE / BLANC
+    ====================================== -->
+
+    <footer>
+
+        <div class="footer-simple">
+
+            <div class="footer-logo">
+
+                <img
+                    src="assets/images/logo.png"
+                    alt="Dessert Shop"
+                >
+
+                <h2>
+                    Dessert Shop
+                </h2>
+
+            </div>
+
+
+            <p>
+                De délicieux desserts préparés avec passion.
+            </p>
+
+
+            <div class="footer-links">
+
+                <a href="#">
+                    Accueil
+                </a>
+
+                <a href="#app-produits">
+                    Desserts
+                </a>
+
+                <a href="#section-panier">
+                    Panier
+                </a>
+
+                <a href="#">
+                    Contact
+                </a>
+
+            </div>
+
+
+            <div class="footer-bottom">
+
+                © 2026 Dessert Shop — Tous droits réservés.
+
+            </div>
+
+        </div>
+
+    </footer>
+
+
+    <!-- =====================================
+         JAVASCRIPT
+    ====================================== -->
+
+    <script src="js/script.js"></script>
+
+</body>
+
+</html>
