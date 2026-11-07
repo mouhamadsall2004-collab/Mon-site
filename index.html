@@ -1,68 +1,73 @@
 <!DOCTYPE html>
 <html lang="fr">
-
 <head>
     <meta charset="UTF-8">
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Dessert Shop</title>
+    <meta
+        name="description"
+        content="DEVACADEMY - Plateforme moderne pour apprendre la programmation."
+    >
 
-    <link rel="stylesheet" href="css/styles.css">
+    <title>DEVACADEMY | Apprendre à programmer</title>
+
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-    <!-- =====================================
-         HEADER
-    ====================================== -->
+    <!-- ================= HEADER ================= -->
 
-    <header class="header">
+    <header class="header" id="header">
 
-        <div class="header-container">
+        <div class="container nav-container">
 
-            <div class="identite">
+            <a href="#accueil" class="logo">
+                <span class="logo-icon">&lt;/&gt;</span>
+                <span>DEV<span>ACADEMY</span></span>
+            </a>
 
-                <img
-                    src="assets/images/logo.png"
-                    alt="Logo Dessert Shop"
-                    class="logo"
-                >
+            <nav class="navbar" id="navbar">
 
-                <h1>Dessert Shop</h1>
+                <a href="#accueil" class="nav-link active">Accueil</a>
+                <a href="#cours" class="nav-link">Cours</a>
+                <a href="#progression" class="nav-link">Progression</a>
+                <a href="#quiz" class="nav-link">Quiz</a>
+                <a href="#apropos" class="nav-link">À propos</a>
+                <a href="#faq" class="nav-link">FAQ</a>
+
+                <div class="mobile-auth">
+                    <button class="btn btn-outline" id="mobileLogin">
+                        Connexion
+                    </button>
+
+                    <button class="btn btn-primary" id="mobileRegister">
+                        Inscription
+                    </button>
+                </div>
+
+            </nav>
+
+            <div class="nav-actions">
+
+                <button class="btn btn-outline" id="loginBtn">
+                    Connexion
+                </button>
+
+                <button class="btn btn-primary" id="registerBtn">
+                    Inscription
+                </button>
 
             </div>
 
-
             <button
-                type="button"
-                id="btn-panier-header"
-                class="btn-panier-header"
+                class="menu-button"
+                id="menuButton"
+                aria-label="Ouvrir le menu"
             >
-
-                <!-- ICONE PANIER -->
-
-                <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="21"
-                    height="20"
-                    viewBox="0 0 21 20"
-                    fill="none"
-                >
-
-                    <path
-                        fill="currentColor"
-                        d="M6.583 18.75a1.25 1.25 0 1 0 0-2.5 1.25 1.25 0 0 0 0 2.5ZM15.334 18.75a1.25 1.25 0 1 0 0-2.5 1.25 1.25 0 0 0 0 2.5ZM3.446 1.752a.625.625 0 0 0-.613-.502h-2.5V2.5h1.988l2.4 11.998a.625.625 0 0 0 .612.502h11.25v-1.25H5.847l-.5-2.5h11.238a.625.625 0 0 0 .61-.49l1.417-6.385a.625.625 0 0 0-.61-.76H4.062l-.616-3.063Z"
-                    />
-
-                </svg>
-
-                <span>Panier</span>
-
-                <span id="compteur-panier">
-                    0
-                </span>
-
+                <span></span>
+                <span></span>
+                <span></span>
             </button>
 
         </div>
@@ -70,769 +75,1474 @@
     </header>
 
 
-    <!-- =====================================
-         CONTENU PRINCIPAL
-    ====================================== -->
-
     <main>
 
-        <!-- =================================
-             SECTION PRODUITS
-        ================================== -->
+        <!-- ================= HERO ================= -->
 
-        <section id="section-produits">
+        <section class="hero" id="accueil">
 
-            <div class="titre-section">
+            <div class="container hero-grid">
 
-                <p>Bienvenue chez</p>
+                <div class="hero-content">
 
-                <h2>
-                    Nos délicieux desserts
-                </h2>
+                    <div class="hero-badge">
+                        Plateforme d'apprentissage du développement
+                    </div>
 
-                <span>
-                    Choisissez votre dessert préféré
-                </span>
+                    <h1>
+                        Apprends à coder.
+                        <span>Construis ton avenir.</span>
+                    </h1>
 
-            </div>
+                    <p class="hero-description">
+                        DEVACADEMY t'accompagne dans ton apprentissage du
+                        développement web et logiciel avec des cours pratiques,
+                        des exercices, des quiz et un système de progression.
+                    </p>
 
+                    <div class="hero-buttons">
 
-            <div id="app-produits">
+                        <button class="btn btn-primary btn-large tilted-btn" id="startLearning">
+                            <span>Commencer maintenant</span>
+                        </button>
 
-
-                <!-- =========================
-                     PRODUIT 1
-                ========================== -->
-
-                <article
-                    class="un-produit"
-                    data-nom="Gaufre aux fruits rouges"
-                    data-prix="10000"
-                    data-categorie="Gaufre"
-                >
-
-                    <img
-                        src="assets/images/image-waffle-mobile.jpg"
-                        alt="Gaufre aux fruits rouges"
-                        class="produits-image"
-                    >
-
-                    <div class="produits-details">
-
-                        <span class="produits-categories">
-                            Gaufre
-                        </span>
-
-                        <h3 class="produits-nom">
-                            Gaufre aux fruits rouges
-                        </h3>
-
-                        <p class="produits-prix">
-                            10.000 FCFA
-                        </p>
-
-                        <button
-                            type="button"
-                            class="btn-ajouter-panier"
-                        >
-
-                            <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                width="21"
-                                height="20"
-                                viewBox="0 0 21 20"
-                                fill="none"
-                            >
-
-                                <path
-                                    fill="currentColor"
-                                    d="M6.583 18.75a1.25 1.25 0 1 0 0-2.5 1.25 1.25 0 0 0 0 2.5ZM15.334 18.75a1.25 1.25 0 1 0 0-2.5 1.25 1.25 0 0 0 0 2.5ZM3.446 1.752a.625.625 0 0 0-.613-.502h-2.5V2.5h1.988l2.4 11.998a.625.625 0 0 0 .612.502h11.25v-1.25H5.847l-.5-2.5h11.238a.625.625 0 0 0 .61-.49l1.417-6.385a.625.625 0 0 0-.61-.76H4.062l-.616-3.063Z"
-                                />
-
-                            </svg>
-
-                            <span>
-                                Ajouter au panier
-                            </span>
-
+                        <button class="btn btn-secondary btn-large tilted-btn" id="discoverCourses">
+                            <span>Découvrir les cours</span>
                         </button>
 
                     </div>
 
-                </article>
+                    <div class="hero-info">
 
+                        <div class="hero-info-item">
+                            <strong>5+</strong>
+                            <span>Technologies</span>
+                        </div>
 
-                <!-- =========================
-                     PRODUIT 2
-                ========================== -->
+                        <div class="hero-info-item">
+                            <strong>50+</strong>
+                            <span>Leçons</span>
+                        </div>
 
-                <article
-                    class="un-produit"
-                    data-nom="Crème Brûlée à la vanille"
-                    data-prix="8000"
-                    data-categorie="Crème Brûlée"
-                >
-
-                    <img
-                        src="assets/images/image-creme-brulee-desktop.jpg"
-                        alt="Crème Brûlée à la vanille"
-                        class="produits-image"
-                    >
-
-                    <div class="produits-details">
-
-                        <span class="produits-categories">
-                            Crème Brûlée
-                        </span>
-
-                        <h3 class="produits-nom">
-                            Crème Brûlée à la vanille
-                        </h3>
-
-                        <p class="produits-prix">
-                            8.000 FCFA
-                        </p>
-
-                        <button
-                            type="button"
-                            class="btn-ajouter-panier"
-                        >
-
-                            <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                width="21"
-                                height="20"
-                                viewBox="0 0 21 20"
-                                fill="none"
-                            >
-
-                                <path
-                                    fill="currentColor"
-                                    d="M6.583 18.75a1.25 1.25 0 1 0 0-2.5 1.25 1.25 0 0 0 0-2.5ZM15.334 18.75a1.25 1.25 0 1 0 0-2.5 1.25 1.25 0 0 0 0-2.5ZM3.446 1.752a.625.625 0 0 0-.613-.502h-2.5V2.5h1.988l2.4 11.998a.625.625 0 0 0 .612.502h11.25v-1.25H5.847l-.5-2.5h11.238a.625.625 0 0 0 .61-.49l1.417-6.385a.625.625 0 0 0-.61-.76H4.062l-.616-3.063Z"
-                                />
-
-                            </svg>
-
-                            <span>
-                                Ajouter au panier
-                            </span>
-
-                        </button>
+                        <div class="hero-info-item">
+                            <strong>100%</strong>
+                            <span>Pratique</span>
+                        </div>
 
                     </div>
 
-                </article>
+                </div>
 
 
-                <!-- =========================
-                     PRODUIT 3
-                ========================== -->
+                <!-- CODE WINDOW -->
 
-                <article
-                    class="un-produit"
-                    data-nom="Assortiment de cinq macarons"
-                    data-prix="8000"
-                    data-categorie="Macarons"
-                >
+                <div class="code-card">
 
-                    <img
-                        src="assets/images/image-macaron-desktop.jpg"
-                        alt="Assortiment de macarons"
-                        class="produits-image"
-                    >
+                    <div class="code-header">
 
-                    <div class="produits-details">
+                        <div class="window-buttons">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
 
-                        <span class="produits-categories">
-                            Macarons
-                        </span>
+                        <div class="code-title">
+                            app.js
+                        </div>
 
-                        <h3 class="produits-nom">
-                            Assortiment de cinq macarons
-                        </h3>
-
-                        <p class="produits-prix">
-                            8.000 FCFA
-                        </p>
-
-                        <button
-                            type="button"
-                            class="btn-ajouter-panier"
-                        >
-
-                            <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                width="21"
-                                height="20"
-                                viewBox="0 0 21 20"
-                                fill="none"
-                            >
-
-                                <path
-                                    fill="currentColor"
-                                    d="M6.583 18.75a1.25 1.25 0 1 0 0-2.5 1.25 1.25 0 0 0 0-2.5ZM15.334 18.75a1.25 1.25 0 1 0 0-2.5 1.25 1.25 0 0 0 0-2.5ZM3.446 1.752a.625.625 0 0 0-.613-.502h-2.5V2.5h1.988l2.4 11.998a.625.625 0 0 0 .612.502h11.25v-1.25H5.847l-.5-2.5h11.238a.625.625 0 0 0 .61-.49l1.417-6.385a.625.625 0 0 0-.61-.76H4.062l-.616-3.063Z"
-                                />
-
-                            </svg>
-
-                            <span>
-                                Ajouter au panier
-                            </span>
-
-                        </button>
+                        <div class="code-status">
+                            Online
+                        </div>
 
                     </div>
 
-                </article>
+                    <div class="code-body">
 
-
-                <!-- =========================
-                     PRODUIT 4
-                ========================== -->
-
-                <article
-                    class="un-produit"
-                    data-nom="Tiramisu classique"
-                    data-prix="5500"
-                    data-categorie="Tiramisu"
-                >
-
-                    <img
-                        src="assets/images/image-tiramisu-desktop.jpg"
-                        alt="Tiramisu classique"
-                        class="produits-image"
-                    >
-
-                    <div class="produits-details">
-
-                        <span class="produits-categories">
-                            Tiramisu
-                        </span>
-
-                        <h3 class="produits-nom">
-                            Tiramisu classique
-                        </h3>
-
-                        <p class="produits-prix">
-                            5.500 FCFA
-                        </p>
-
-                        <button
-                            type="button"
-                            class="btn-ajouter-panier"
-                        >
-
-                            <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                width="21"
-                                height="20"
-                                viewBox="0 0 21 20"
-                                fill="none"
-                            >
-
-                                <path
-                                    fill="currentColor"
-                                    d="M6.583 18.75a1.25 1.25 0 1 0 0-2.5 1.25 1.25 0 0 0 0-2.5ZM15.334 18.75a1.25 1.25 0 1 0 0-2.5 1.25 1.25 0 0 0 0-2.5ZM3.446 1.752a.625.625 0 0 0-.613-.502h-2.5V2.5h1.988l2.4 11.998a.625.625 0 0 0 .612.502h11.25v-1.25H5.847l-.5-2.5h11.238a.625.625 0 0 0 .61-.49l1.417-6.385a.625.625 0 0 0-.61-.76H4.062l-.616-3.063Z"
-                                />
-
-                            </svg>
-
+                        <div class="code-line">
+                            <span class="line-number">01</span>
                             <span>
-                                Ajouter au panier
+                                <span class="purple">const</span>
+                                <span class="blue">student</span> =
+                                <span class="yellow">{</span>
                             </span>
+                        </div>
 
-                        </button>
+                        <div class="code-line">
+                            <span class="line-number">02</span>
+                            <span class="indent">
+                                name:
+                                <span class="green">"Mouhamed"</span>,
+                            </span>
+                        </div>
+
+                        <div class="code-line">
+                            <span class="line-number">03</span>
+                            <span class="indent">
+                                level:
+                                <span class="green">"Débutant"</span>,
+                            </span>
+                        </div>
+
+                        <div class="code-line">
+                            <span class="line-number">04</span>
+                            <span class="indent">
+                                goal:
+                                <span class="green">"Developer"</span>
+                            </span>
+                        </div>
+
+                        <div class="code-line">
+                            <span class="line-number">05</span>
+                            <span>
+                                <span class="yellow">}</span>;
+                            </span>
+                        </div>
+
+                        <div class="code-line">
+                            <span class="line-number">06</span>
+                            <span></span>
+                        </div>
+
+                        <div class="code-line">
+                            <span class="line-number">07</span>
+                            <span>
+                                <span class="purple">function</span>
+                                <span class="blue">learn</span>() {
+                            </span>
+                        </div>
+
+                        <div class="code-line">
+                            <span class="line-number">08</span>
+                            <span class="indent">
+                                <span class="blue">console</span>.
+                                <span class="blue">log</span>(
+                                <span class="green">
+                                    "Je continue à apprendre !"
+                                </span>);
+                            </span>
+                        </div>
+
+                        <div class="code-line">
+                            <span class="line-number">09</span>
+                            <span>}</span>
+                        </div>
+
+                        <div class="code-line">
+                            <span class="line-number">10</span>
+                            <span>
+                                <span class="blue">learn</span>();
+                            </span>
+                        </div>
 
                     </div>
 
-                </article>
-
-
-                <!-- =========================
-                     PRODUIT 5
-                ========================== -->
-
-                <article
-                    class="un-produit"
-                    data-nom="Baklava aux pistaches"
-                    data-prix="4000"
-                    data-categorie="Baklava"
-                >
-
-                    <img
-                        src="assets/images/image-baklava-desktop.jpg"
-                        alt="Baklava aux pistaches"
-                        class="produits-image"
-                    >
-
-                    <div class="produits-details">
-
-                        <span class="produits-categories">
-                            Baklava
-                        </span>
-
-                        <h3 class="produits-nom">
-                            Baklava aux pistaches
-                        </h3>
-
-                        <p class="produits-prix">
-                            4.000 FCFA
-                        </p>
-
-                        <button
-                            type="button"
-                            class="btn-ajouter-panier"
-                        >
-
-                            <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                width="21"
-                                height="20"
-                                viewBox="0 0 21 20"
-                                fill="none"
-                            >
-
-                                <path
-                                    fill="currentColor"
-                                    d="M6.583 18.75a1.25 1.25 0 1 0 0-2.5 1.25 1.25 0 0 0 0-2.5ZM15.334 18.75a1.25 1.25 0 1 0 0-2.5 1.25 1.25 0 0 0 0-2.5ZM3.446 1.752a.625.625 0 0 0-.613-.502h-2.5V2.5h1.988l2.4 11.998a.625.625 0 0 0 .612.502h11.25v-1.25H5.847l-.5-2.5h11.238a.625.625 0 0 0 .61-.49l1.417-6.385a.625.625 0 0 0-.61-.76H4.062l-.616-3.063Z"
-                                />
-
-                            </svg>
-
-                            <span>
-                                Ajouter au panier
-                            </span>
-
-                        </button>
-
-                    </div>
-
-                </article>
-
-
-                <!-- =========================
-                     PRODUIT 6
-                ========================== -->
-
-                <article
-                    class="un-produit"
-                    data-nom="Tarte au citron meringuée"
-                    data-prix="5000"
-                    data-categorie="Tarte"
-                >
-
-                    <img
-                        src="assets/images/image-meringue-desktop.jpg"
-                        alt="Tarte au citron meringuée"
-                        class="produits-image"
-                    >
-
-                    <div class="produits-details">
-
-                        <span class="produits-categories">
-                            Tarte
-                        </span>
-
-                        <h3 class="produits-nom">
-                            Tarte au citron meringuée
-                        </h3>
-
-                        <p class="produits-prix">
-                            5.000 FCFA
-                        </p>
-
-                        <button
-                            type="button"
-                            class="btn-ajouter-panier"
-                        >
-
-                            <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                width="21"
-                                height="20"
-                                viewBox="0 0 21 20"
-                                fill="none"
-                            >
-
-                                <path
-                                    fill="currentColor"
-                                    d="M6.583 18.75a1.25 1.25 0 1 0 0-2.5 1.25 1.25 0 0 0 0-2.5ZM15.334 18.75a1.25 1.25 0 1 0 0-2.5 1.25 1.25 0 0 0 0-2.5ZM3.446 1.752a.625.625 0 0 0-.613-.502h-2.5V2.5h1.988l2.4 11.998a.625.625 0 0 0 .612.502h11.25v-1.25H5.847l-.5-2.5h11.238a.625.625 0 0 0 .61-.49l1.417-6.385a.625.625 0 0 0-.61-.76H4.062l-.616-3.063Z"
-                                />
-
-                            </svg>
-
-                            <span>
-                                Ajouter au panier
-                            </span>
-
-                        </button>
-
-                    </div>
-
-                </article>
-
-
-                <!-- =========================
-                     PRODUIT 7
-                ========================== -->
-
-                <article
-                    class="un-produit"
-                    data-nom="Gâteau de velours rouge"
-                    data-prix="4500"
-                    data-categorie="Gâteau"
-                >
-
-                    <img
-                        src="assets/images/image-cake-desktop.jpg"
-                        alt="Gâteau de velours rouge"
-                        class="produits-image"
-                    >
-
-                    <div class="produits-details">
-
-                        <span class="produits-categories">
-                            Gâteau
-                        </span>
-
-                        <h3 class="produits-nom">
-                            Gâteau de velours rouge
-                        </h3>
-
-                        <p class="produits-prix">
-                            4.500 FCFA
-                        </p>
-
-                        <button
-                            type="button"
-                            class="btn-ajouter-panier"
-                        >
-
-                            <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                width="21"
-                                height="20"
-                                viewBox="0 0 21 20"
-                                fill="none"
-                            >
-
-                                <path
-                                    fill="currentColor"
-                                    d="M6.583 18.75a1.25 1.25 0 1 0 0-2.5 1.25 1.25 0 0 0 0-2.5ZM15.334 18.75a1.25 1.25 0 1 0 0-2.5 1.25 1.25 0 0 0 0-2.5ZM3.446 1.752a.625.625 0 0 0-.613-.502h-2.5V2.5h1.988l2.4 11.998a.625.625 0 0 0 .612.502h11.25v-1.25H5.847l-.5-2.5h11.238a.625.625 0 0 0 .61-.49l1.417-6.385a.625.625 0 0 0-.61-.76H4.062l-.616-3.063Z"
-                                />
-
-                            </svg>
-
-                            <span>
-                                Ajouter au panier
-                            </span>
-
-                        </button>
-
-                    </div>
-
-                </article>
-
-
-                <!-- =========================
-                     PRODUIT 8
-                ========================== -->
-
-                <article
-                    class="un-produit"
-                    data-nom="Brownie au caramel salé"
-                    data-prix="5500"
-                    data-categorie="Brownie"
-                >
-
-                    <img
-                        src="assets/images/image-brownie-desktop.jpg"
-                        alt="Brownie au caramel salé"
-                        class="produits-image"
-                    >
-
-                    <div class="produits-details">
-
-                        <span class="produits-categories">
-                            Brownie
-                        </span>
-
-                        <h3 class="produits-nom">
-                            Brownie au caramel salé
-                        </h3>
-
-                        <p class="produits-prix">
-                            5.500 FCFA
-                        </p>
-
-                        <button
-                            type="button"
-                            class="btn-ajouter-panier"
-                        >
-
-                            <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                width="21"
-                                height="20"
-                                viewBox="0 0 21 20"
-                                fill="none"
-                            >
-
-                                <path
-                                    fill="currentColor"
-                                    d="M6.583 18.75a1.25 1.25 0 1 0 0-2.5 1.25 1.25 0 0 0 0-2.5ZM15.334 18.75a1.25 1.25 0 1 0 0-2.5 1.25 1.25 0 0 0 0-2.5ZM3.446 1.752a.625.625 0 0 0-.613-.502h-2.5V2.5h1.988l2.4 11.998a.625.625 0 0 0 .612.502h11.25v-1.25H5.847l-.5-2.5h11.238a.625.625 0 0 0 .61-.49l1.417-6.385a.625.625 0 0 0-.61-.76H4.062l-.616-3.063Z"
-                                />
-
-                            </svg>
-
-                            <span>
-                                Ajouter au panier
-                            </span>
-
-                        </button>
-
-                    </div>
-
-                </article>
-
-
-                <!-- =========================
-                     PRODUIT 9
-                ========================== -->
-
-                <article
-                    class="un-produit"
-                    data-nom="Panna Cotta à la vanille"
-                    data-prix="10000"
-                    data-categorie="Panna Cotta"
-                >
-
-                    <img
-                        src="assets/images/image-panna-cotta-desktop.jpg"
-                        alt="Panna Cotta à la vanille"
-                        class="produits-image"
-                    >
-
-                    <div class="produits-details">
-
-                        <span class="produits-categories">
-                            Panna Cotta
-                        </span>
-
-                        <h3 class="produits-nom">
-                            Panna Cotta à la vanille
-                        </h3>
-
-                        <p class="produits-prix">
-                            10.000 FCFA
-                        </p>
-
-                        <button
-                            type="button"
-                            class="btn-ajouter-panier"
-                        >
-
-                            <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                width="21"
-                                height="20"
-                                viewBox="0 0 21 20"
-                                fill="none"
-                            >
-
-                                <path
-                                    fill="currentColor"
-                                    d="M6.583 18.75a1.25 1.25 0 1 0 0-2.5 1.25 1.25 0 0 0 0-2.5ZM15.334 18.75a1.25 1.25 0 1 0 0-2.5 1.25 1.25 0 0 0 0-2.5ZM3.446 1.752a.625.625 0 0 0-.613-.502h-2.5V2.5h1.988l2.4 11.998a.625.625 0 0 0 .612.502h11.25v-1.25H5.847l-.5-2.5h11.238a.625.625 0 0 0 .61-.49l1.417-6.385a.625.625 0 0 0-.61-.76H4.062l-.616-3.063Z"
-                                />
-
-                            </svg>
-
-                            <span>
-                                Ajouter au panier
-                            </span>
-
-                        </button>
-
-                    </div>
-
-                </article>
+                </div>
 
             </div>
 
         </section>
 
 
-        <!-- =================================
-             PANIER
-        ================================== -->
+        <!-- ================= TECHNOLOGIES ================= -->
 
-        <aside
-            id="section-panier"
-            class="section-panier"
-        >
+        <section class="technologies">
 
-            <div class="panier-header">
+            <div class="container">
 
-                <h2>
+                <p class="section-small-title">
+                    APPRENDS LES TECHNOLOGIES LES PLUS UTILISÉES
+                </p>
 
-                    <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="24"
-                        height="24"
-                        viewBox="0 0 21 20"
-                        fill="none"
-                    >
+                <div class="technology-list">
 
-                        <path
-                            fill="#f891a6"
-                            d="M6.583 18.75a1.25 1.25 0 1 0 0-2.5 1.25 1.25 0 0 0 0 2.5ZM15.334 18.75a1.25 1.25 0 1 0 0-2.5 1.25 1.25 0 0 0 0-2.5ZM3.446 1.752a.625.625 0 0 0-.613-.502h-2.5V2.5h1.988l2.4 11.998a.625.625 0 0 0 .612.502h11.25v-1.25H5.847l-.5-2.5h11.238a.625.625 0 0 0 .61-.49l1.417-6.385a.625.625 0 0 0-.61-.76H4.062l-.616-3.063Z"
-                        />
+                    <div class="technology-item html-tech">
+                        <span class="tech-symbol">HTML</span>
+                        <strong>HTML5</strong>
+                    </div>
 
-                    </svg>
+                    <div class="technology-item css-tech">
+                        <span class="tech-symbol">CSS</span>
+                        <strong>CSS3</strong>
+                    </div>
 
-                    Votre panier
+                    <div class="technology-item js-tech">
+                        <span class="tech-symbol">JS</span>
+                        <strong>JavaScript</strong>
+                    </div>
 
-                </h2>
+                    <div class="technology-item python-tech">
+                        <span class="tech-symbol">PY</span>
+                        <strong>Python</strong>
+                    </div>
 
+                    <div class="technology-item java-tech">
+                        <span class="tech-symbol">JAVA</span>
+                        <strong>Java</strong>
+                    </div>
 
-                <span id="nombre-panier">
-                    0 article
-                </span>
+                </div>
 
             </div>
 
+        </section>
 
-            <div
-                id="contenu-panier"
-                class="contenu-panier"
-            >
 
-                <div class="panier-vide">
+        <!-- ================= COURSES ================= -->
 
-                    <div class="icone-panier">
+        <section class="section courses-section" id="cours">
 
-                        <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            width="45"
-                            height="45"
-                            viewBox="0 0 21 20"
-                            fill="none"
+            <div class="container">
+
+                <div class="section-heading">
+
+                    <div>
+                        <span class="section-label">
+                            NOS FORMATIONS
+                        </span>
+
+                        <h2>
+                            Choisis ton parcours
+                        </h2>
+
+                        <p>
+                            Apprends progressivement avec des cours adaptés
+                            à ton niveau.
+                        </p>
+                    </div>
+
+                    <button class="btn btn-primary tilted-btn" id="allCoursesBtn">
+                        <span>Voir tous les cours</span>
+                    </button>
+
+                </div>
+
+
+                <!-- SEARCH -->
+
+                <div class="course-tools">
+
+                    <div class="search-box">
+
+                        <span class="search-icon">⌕</span>
+
+                        <input
+                            type="text"
+                            id="courseSearch"
+                            placeholder="Rechercher un cours..."
                         >
-
-                            <path
-                                fill="#f891a6"
-                                d="M6.583 18.75a1.25 1.25 0 1 0 0-2.5 1.25 1.25 0 0 0 0 2.5ZM15.334 18.75a1.25 1.25 0 1 0 0-2.5 1.25 1.25 0 0 0 0-2.5ZM3.446 1.752a.625.625 0 0 0-.613-.502h-2.5V2.5h1.988l2.4 11.998a.625.625 0 0 0 .612.502h11.25v-1.25H5.847l-.5-2.5h11.238a.625.625 0 0 0 .61-.49l1.417-6.385a.625.625 0 0 0-.61-.76H4.062l-.616-3.063Z"
-                            />
-
-                        </svg>
 
                     </div>
 
-                    <h3>
-                        Votre panier est vide
-                    </h3>
+
+                    <div class="filter-buttons">
+
+                        <button
+                            class="filter-btn active"
+                            data-filter="all"
+                        >
+                            Tous
+                        </button>
+
+                        <button
+                            class="filter-btn"
+                            data-filter="web"
+                        >
+                            Web
+                        </button>
+
+                        <button
+                            class="filter-btn"
+                            data-filter="programming"
+                        >
+                            Programmation
+                        </button>
+
+                        <button
+                            class="filter-btn"
+                            data-filter="database"
+                        >
+                            Base de données
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <!-- COURSE CARDS -->
+
+                <div class="courses-grid" id="coursesGrid">
+
+
+                    <!-- HTML -->
+
+                    <article
+                        class="course-card"
+                        data-category="web"
+                        data-title="HTML5"
+                    >
+
+                        <div class="course-top html-bg">
+
+                            <div class="course-icon">
+                                HTML
+                            </div>
+
+                            <span class="course-level">
+                                Débutant
+                            </span>
+
+                        </div>
+
+                        <div class="course-content">
+
+                            <span class="course-category">
+                                Développement Web
+                            </span>
+
+                            <h3>HTML5</h3>
+
+                            <p>
+                                Apprends à créer la structure complète
+                                d'une page web.
+                            </p>
+
+                            <div class="course-meta">
+
+                                <span>12 leçons</span>
+                                <span>4 exercices</span>
+
+                            </div>
+
+                            <div class="progress-small">
+
+                                <div>
+                                    <span>Progression</span>
+                                    <strong>65%</strong>
+                                </div>
+
+                                <div class="progress-track">
+                                    <div
+                                        class="progress-fill"
+                                        style="width:65%"
+                                    ></div>
+                                </div>
+
+                            </div>
+
+                            <button
+                                class="btn btn-primary course-btn"
+                                data-course="HTML5"
+                            >
+                                Commencer
+                            </button>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- CSS -->
+
+                    <article
+                        class="course-card"
+                        data-category="web"
+                        data-title="CSS3"
+                    >
+
+                        <div class="course-top css-bg">
+
+                            <div class="course-icon">
+                                CSS
+                            </div>
+
+                            <span class="course-level">
+                                Débutant
+                            </span>
+
+                        </div>
+
+                        <div class="course-content">
+
+                            <span class="course-category">
+                                Design Web
+                            </span>
+
+                            <h3>CSS3</h3>
+
+                            <p>
+                                Apprends à créer des interfaces modernes,
+                                responsives et professionnelles.
+                            </p>
+
+                            <div class="course-meta">
+
+                                <span>15 leçons</span>
+                                <span>6 exercices</span>
+
+                            </div>
+
+                            <div class="progress-small">
+
+                                <div>
+                                    <span>Progression</span>
+                                    <strong>48%</strong>
+                                </div>
+
+                                <div class="progress-track">
+                                    <div
+                                        class="progress-fill"
+                                        style="width:48%"
+                                    ></div>
+                                </div>
+
+                            </div>
+
+                            <button
+                                class="btn btn-primary course-btn"
+                                data-course="CSS3"
+                            >
+                                Commencer
+                            </button>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- JAVASCRIPT -->
+
+                    <article
+                        class="course-card"
+                        data-category="web"
+                        data-title="JavaScript"
+                    >
+
+                        <div class="course-top js-bg">
+
+                            <div class="course-icon">
+                                JS
+                            </div>
+
+                            <span class="course-level intermediate">
+                                Intermédiaire
+                            </span>
+
+                        </div>
+
+                        <div class="course-content">
+
+                            <span class="course-category">
+                                Programmation Web
+                            </span>
+
+                            <h3>JavaScript</h3>
+
+                            <p>
+                                Apprends à rendre tes applications web
+                                interactives et dynamiques.
+                            </p>
+
+                            <div class="course-meta">
+
+                                <span>24 leçons</span>
+                                <span>12 exercices</span>
+
+                            </div>
+
+                            <div class="progress-small">
+
+                                <div>
+                                    <span>Progression</span>
+                                    <strong>32%</strong>
+                                </div>
+
+                                <div class="progress-track">
+                                    <div
+                                        class="progress-fill"
+                                        style="width:32%"
+                                    ></div>
+                                </div>
+
+                            </div>
+
+                            <button
+                                class="btn btn-primary course-btn"
+                                data-course="JavaScript"
+                            >
+                                Commencer
+                            </button>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- PYTHON -->
+
+                    <article
+                        class="course-card"
+                        data-category="programming"
+                        data-title="Python"
+                    >
+
+                        <div class="course-top python-bg">
+
+                            <div class="course-icon">
+                                PY
+                            </div>
+
+                            <span class="course-level">
+                                Débutant
+                            </span>
+
+                        </div>
+
+                        <div class="course-content">
+
+                            <span class="course-category">
+                                Programmation
+                            </span>
+
+                            <h3>Python</h3>
+
+                            <p>
+                                Découvre un langage simple et puissant
+                                pour programmer.
+                            </p>
+
+                            <div class="course-meta">
+
+                                <span>20 leçons</span>
+                                <span>10 exercices</span>
+
+                            </div>
+
+                            <div class="progress-small">
+
+                                <div>
+                                    <span>Progression</span>
+                                    <strong>20%</strong>
+                                </div>
+
+                                <div class="progress-track">
+                                    <div
+                                        class="progress-fill"
+                                        style="width:20%"
+                                    ></div>
+                                </div>
+
+                            </div>
+
+                            <button
+                                class="btn btn-primary course-btn"
+                                data-course="Python"
+                            >
+                                Commencer
+                            </button>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- JAVA -->
+
+                    <article
+                        class="course-card"
+                        data-category="programming"
+                        data-title="Java"
+                    >
+
+                        <div class="course-top java-bg">
+
+                            <div class="course-icon">
+                                JAVA
+                            </div>
+
+                            <span class="course-level intermediate">
+                                Intermédiaire
+                            </span>
+
+                        </div>
+
+                        <div class="course-content">
+
+                            <span class="course-category">
+                                Programmation
+                            </span>
+
+                            <h3>Java</h3>
+
+                            <p>
+                                Apprends la programmation orientée objet
+                                avec Java.
+                            </p>
+
+                            <div class="course-meta">
+
+                                <span>22 leçons</span>
+                                <span>8 exercices</span>
+
+                            </div>
+
+                            <div class="progress-small">
+
+                                <div>
+                                    <span>Progression</span>
+                                    <strong>12%</strong>
+                                </div>
+
+                                <div class="progress-track">
+                                    <div
+                                        class="progress-fill"
+                                        style="width:12%"
+                                    ></div>
+                                </div>
+
+                            </div>
+
+                            <button
+                                class="btn btn-primary course-btn"
+                                data-course="Java"
+                            >
+                                Commencer
+                            </button>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- SQL -->
+
+                    <article
+                        class="course-card"
+                        data-category="database"
+                        data-title="SQL"
+                    >
+
+                        <div class="course-top sql-bg">
+
+                            <div class="course-icon">
+                                SQL
+                            </div>
+
+                            <span class="course-level">
+                                Débutant
+                            </span>
+
+                        </div>
+
+                        <div class="course-content">
+
+                            <span class="course-category">
+                                Base de données
+                            </span>
+
+                            <h3>SQL</h3>
+
+                            <p>
+                                Apprends à créer, manipuler et interroger
+                                des bases de données.
+                            </p>
+
+                            <div class="course-meta">
+
+                                <span>18 leçons</span>
+                                <span>9 exercices</span>
+
+                            </div>
+
+                            <div class="progress-small">
+
+                                <div>
+                                    <span>Progression</span>
+                                    <strong>5%</strong>
+                                </div>
+
+                                <div class="progress-track">
+                                    <div
+                                        class="progress-fill"
+                                        style="width:5%"
+                                    ></div>
+                                </div>
+
+                            </div>
+
+                            <button
+                                class="btn btn-primary course-btn"
+                                data-course="SQL"
+                            >
+                                Commencer
+                            </button>
+
+                        </div>
+
+                    </article>
+
+                </div>
+
+
+                <div
+                    class="no-results"
+                    id="noResults"
+                >
+                    Aucun cours ne correspond à votre recherche.
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= STATISTICS ================= -->
+
+        <section class="stats-section">
+
+            <div class="container">
+
+                <div class="stats-grid">
+
+                    <div class="stat-card">
+                        <strong
+                            class="counter"
+                            data-target="5000"
+                        >
+                            0
+                        </strong>
+                        <span>Étudiants</span>
+                    </div>
+
+                    <div class="stat-card">
+                        <strong
+                            class="counter"
+                            data-target="50"
+                        >
+                            0
+                        </strong>
+                        <span>Cours</span>
+                    </div>
+
+                    <div class="stat-card">
+                        <strong
+                            class="counter"
+                            data-target="120"
+                        >
+                            0
+                        </strong>
+                        <span>Exercices</span>
+                    </div>
+
+                    <div class="stat-card">
+                        <strong
+                            class="counter"
+                            data-target="98"
+                        >
+                            0
+                        </strong>
+                        <span>% satisfaction</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= PROGRESSION ================= -->
+
+        <section class="section progress-section" id="progression">
+
+            <div class="container">
+
+                <div class="section-heading centered">
+
+                    <span class="section-label">
+                        TON ESPACE
+                    </span>
+
+                    <h2>
+                        Suis ta progression
+                    </h2>
 
                     <p>
-                        Ajoutez vos desserts préférés.
+                        Visualise facilement ton évolution dans tes
+                        différentes formations.
                     </p>
 
                 </div>
 
+
+                <div class="dashboard-card">
+
+                    <div class="dashboard-header">
+
+                        <div>
+
+                            <span class="dashboard-welcome">
+                                Bonjour étudiant
+                            </span>
+
+                            <h3>
+                                Continue ton apprentissage
+                            </h3>
+
+                        </div>
+
+                        <div class="dashboard-percent">
+                            42%
+                        </div>
+
+                    </div>
+
+
+                    <div class="overall-progress">
+
+                        <div class="progress-track large">
+                            <div
+                                class="progress-fill"
+                                style="width:42%"
+                            ></div>
+                        </div>
+
+                    </div>
+
+
+                    <div class="progress-courses">
+
+                        <div class="progress-course">
+
+                            <div class="progress-course-icon html-bg">
+                                HTML
+                            </div>
+
+                            <div class="progress-course-info">
+
+                                <h4>HTML5</h4>
+
+                                <p>
+                                    8 / 12 leçons terminées
+                                </p>
+
+                                <div class="progress-track">
+                                    <div
+                                        class="progress-fill"
+                                        style="width:67%"
+                                    ></div>
+                                </div>
+
+                            </div>
+
+                            <strong>67%</strong>
+
+                        </div>
+
+
+                        <div class="progress-course">
+
+                            <div class="progress-course-icon css-bg">
+                                CSS
+                            </div>
+
+                            <div class="progress-course-info">
+
+                                <h4>CSS3</h4>
+
+                                <p>
+                                    7 / 15 leçons terminées
+                                </p>
+
+                                <div class="progress-track">
+                                    <div
+                                        class="progress-fill"
+                                        style="width:47%"
+                                    ></div>
+                                </div>
+
+                            </div>
+
+                            <strong>47%</strong>
+
+                        </div>
+
+
+                        <div class="progress-course">
+
+                            <div class="progress-course-icon js-bg">
+                                JS
+                            </div>
+
+                            <div class="progress-course-info">
+
+                                <h4>JavaScript</h4>
+
+                                <p>
+                                    8 / 24 leçons terminées
+                                </p>
+
+                                <div class="progress-track">
+                                    <div
+                                        class="progress-fill"
+                                        style="width:33%"
+                                    ></div>
+                                </div>
+
+                            </div>
+
+                            <strong>33%</strong>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
             </div>
 
+        </section>
 
-            <div class="panier-resume">
 
-                <div class="ligne-total">
+        <!-- ================= WHY DEVACADEMY ================= -->
 
-                    <span>
-                        Total
+        <section class="section why-section" id="apropos">
+
+            <div class="container">
+
+                <div class="section-heading centered">
+
+                    <span class="section-label">
+                        POURQUOI DEVACADEMY ?
                     </span>
 
-                    <strong id="total-panier">
-                        0 FCFA
-                    </strong>
+                    <h2>
+                        Une méthode pensée pour apprendre
+                    </h2>
+
+                    <p>
+                        Pas seulement regarder des cours :
+                        pratique, exercices et projets.
+                    </p>
 
                 </div>
 
 
-                <button
-                    type="button"
-                    id="btn-commander"
-                    class="btn-commander"
-                    disabled
-                >
-                    Commander
-                </button>
+                <div class="features-grid">
+
+                    <div class="feature-card">
+
+                        <div class="feature-number">
+                            01
+                        </div>
+
+                        <h3>
+                            Cours progressifs
+                        </h3>
+
+                        <p>
+                            Commence par les bases puis avance
+                            progressivement vers des concepts plus
+                            avancés.
+                        </p>
+
+                        <button
+                            class="text-button feature-btn"
+                            data-message="Les cours sont organisés progressivement."
+                        >
+                            En savoir plus
+                        </button>
+
+                    </div>
 
 
-                <button
-                    type="button"
-                    id="btn-vider"
-                    class="btn-vider"
-                    disabled
-                >
-                    Vider le panier
-                </button>
+                    <div class="feature-card">
+
+                        <div class="feature-number">
+                            02
+                        </div>
+
+                        <h3>
+                            Exercices pratiques
+                        </h3>
+
+                        <p>
+                            Mets immédiatement en pratique les notions
+                            apprises avec des exercices.
+                        </p>
+
+                        <button
+                            class="text-button feature-btn"
+                            data-message="Les exercices permettent de pratiquer immédiatement."
+                        >
+                            En savoir plus
+                        </button>
+
+                    </div>
+
+
+                    <div class="feature-card">
+
+                        <div class="feature-number">
+                            03
+                        </div>
+
+                        <h3>
+                            Projets réels
+                        </h3>
+
+                        <p>
+                            Construis des applications afin de développer
+                            ton expérience.
+                        </p>
+
+                        <button
+                            class="text-button feature-btn"
+                            data-message="Les projets sont orientés vers des situations concrètes."
+                        >
+                            En savoir plus
+                        </button>
+
+                    </div>
+
+
+                    <div class="feature-card">
+
+                        <div class="feature-number">
+                            04
+                        </div>
+
+                        <h3>
+                            Suivi de progression
+                        </h3>
+
+                        <p>
+                            Suis ton évolution et identifie facilement
+                            les cours à poursuivre.
+                        </p>
+
+                        <button
+                            class="text-button feature-btn"
+                            data-message="Ton tableau de progression te permet de suivre ton évolution."
+                        >
+                            En savoir plus
+                        </button>
+
+                    </div>
+
+                </div>
 
             </div>
 
-        </aside>
+        </section>
+
+
+        <!-- ================= QUIZ ================= -->
+
+        <section class="section quiz-section" id="quiz">
+
+            <div class="container quiz-container">
+
+                <div class="quiz-content">
+
+                    <span class="section-label">
+                        TESTE TES CONNAISSANCES
+                    </span>
+
+                    <h2>
+                        Quel est ton niveau en programmation ?
+                    </h2>
+
+                    <p>
+                        Réponds à quelques questions pour tester
+                        tes connaissances en développement.
+                    </p>
+
+                    <button
+                        class="btn btn-primary btn-large tilted-btn"
+                        id="startQuiz"
+                    >
+                        <span>Commencer le quiz</span>
+                    </button>
+
+                </div>
+
+
+                <div class="quiz-visual">
+
+                    <div class="quiz-circle">
+
+                        <span>QUIZ</span>
+
+                        <strong>5</strong>
+
+                        <small>questions</small>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= TESTIMONIALS ================= -->
+
+        <section class="section testimonials-section">
+
+            <div class="container">
+
+                <div class="section-heading centered">
+
+                    <span class="section-label">
+                        AVIS DES ÉTUDIANTS
+                    </span>
+
+                    <h2>
+                        Une communauté qui apprend ensemble
+                    </h2>
+
+                </div>
+
+
+                <div class="testimonials-grid">
+
+                    <article class="testimonial-card">
+
+                        <div class="testimonial-stars">
+                            5 / 5
+                        </div>
+
+                        <p>
+                            "Les exercices m'ont beaucoup aidé à comprendre
+                            les bases du développement web."
+                        </p>
+
+                        <div class="testimonial-user">
+
+                            <div class="avatar">
+                                AD
+                            </div>
+
+                            <div>
+                                <strong>Amadou</strong>
+                                <span>Étudiant</span>
+                            </div>
+
+                        </div>
+
+                    </article>
+
+
+                    <article class="testimonial-card">
+
+                        <div class="testimonial-stars">
+                            5 / 5
+                        </div>
+
+                        <p>
+                            "J'ai commencé avec HTML et CSS puis je suis
+                            progressivement passé à JavaScript."
+                        </p>
+
+                        <div class="testimonial-user">
+
+                            <div class="avatar">
+                                SF
+                            </div>
+
+                            <div>
+                                <strong>Fatou</strong>
+                                <span>Développeuse débutante</span>
+                            </div>
+
+                        </div>
+
+                    </article>
+
+
+                    <article class="testimonial-card">
+
+                        <div class="testimonial-stars">
+                            5 / 5
+                        </div>
+
+                        <p>
+                            "La progression permet de savoir exactement
+                            ce qu'il reste à apprendre."
+                        </p>
+
+                        <div class="testimonial-user">
+
+                            <div class="avatar">
+                                MN
+                            </div>
+
+                            <div>
+                                <strong>Moussa</strong>
+                                <span>Étudiant en informatique</span>
+                            </div>
+
+                        </div>
+
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= FAQ ================= -->
+
+        <section class="section faq-section" id="faq">
+
+            <div class="container faq-container">
+
+                <div class="section-heading centered">
+
+                    <span class="section-label">
+                        QUESTIONS FRÉQUENTES
+                    </span>
+
+                    <h2>
+                        Questions et réponses
+                    </h2>
+
+                </div>
+
+
+                <div class="faq-list">
+
+                    <div class="faq-item">
+
+                        <button class="faq-question">
+
+                            <span>
+                                Est-ce que DEVACADEMY est adapté aux débutants ?
+                            </span>
+
+                            <span class="faq-plus">
+                                +
+                            </span>
+
+                        </button>
+
+                        <div class="faq-answer">
+
+                            <p>
+                                Oui. Les cours commencent par les notions
+                                fondamentales avant d'aller progressivement
+                                vers des concepts plus avancés.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="faq-item">
+
+                        <button class="faq-question">
+
+                            <span>
+                                Quels langages puis-je apprendre ?
+                            </span>
+
+                            <span class="faq-plus">
+                                +
+                            </span>
+
+                        </button>
+
+                        <div class="faq-answer">
+
+                            <p>
+                                La plateforme propose notamment HTML, CSS,
+                                JavaScript, Python, Java et SQL.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="faq-item">
+
+                        <button class="faq-question">
+
+                            <span>
+                                Puis-je suivre ma progression ?
+                            </span>
+
+                            <span class="faq-plus">
+                                +
+                            </span>
+
+                        </button>
+
+                        <div class="faq-answer">
+
+                            <p>
+                                Oui. Une section de progression permet de
+                                visualiser l'avancement de tes formations.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="faq-item">
+
+                        <button class="faq-question">
+
+                            <span>
+                                Puis-je sauvegarder mon inscription ?
+                            </span>
+
+                            <span class="faq-plus">
+                                +
+                            </span>
+
+                        </button>
+
+                        <div class="faq-answer">
+
+                            <p>
+                                Oui. Cette version utilise localStorage
+                                pour conserver certaines informations
+                                directement dans ton navigateur.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= CTA ================= -->
+
+        <section class="cta-section">
+
+            <div class="container">
+
+                <div class="cta-box">
+
+                    <div>
+
+                        <span class="section-label">
+                            PRÊT À COMMENCER ?
+                        </span>
+
+                        <h2>
+                            Transforme tes idées en applications.
+                        </h2>
+
+                        <p>
+                            Commence aujourd'hui ton parcours de développeur.
+                        </p>
+
+                    </div>
+
+                    <button
+                        class="btn btn-white btn-large tilted-btn"
+                        id="ctaRegister"
+                    >
+                        <span>Créer mon compte</span>
+                    </button>
+
+                </div>
+
+            </div>
+
+        </section>
 
     </main>
 
 
-    <!-- =====================================
-         FOOTER SIMPLE ROSE / BLANC
-    ====================================== -->
+    <!-- ================= FOOTER ================= -->
 
-    <footer>
+    <footer class="footer">
 
-        <div class="footer-simple">
+        <div class="container footer-grid">
 
-            <div class="footer-logo">
+            <div class="footer-brand">
 
-                <img
-                    src="assets/images/logo.png"
-                    alt="Dessert Shop"
+                <a href="#accueil" class="logo footer-logo">
+                    <span class="logo-icon">&lt;/&gt;</span>
+                    <span>DEV<span>ACADEMY</span></span>
+                </a>
+
+                <p>
+                    Une plateforme moderne pour apprendre la programmation
+                    et construire des projets.
+                </p>
+
+            </div>
+
+
+            <div class="footer-column">
+
+                <h4>Plateforme</h4>
+
+                <a href="#cours">Cours</a>
+                <a href="#progression">Progression</a>
+                <a href="#quiz">Quiz</a>
+
+            </div>
+
+
+            <div class="footer-column">
+
+                <h4>Technologies</h4>
+
+                <a href="#cours">HTML5</a>
+                <a href="#cours">CSS3</a>
+                <a href="#cours">JavaScript</a>
+                <a href="#cours">Python</a>
+
+            </div>
+
+
+            <div class="footer-column">
+
+                <h4>Support</h4>
+
+                <a href="#faq">FAQ</a>
+                <a href="#apropos">À propos</a>
+
+                <button
+                    class="footer-contact"
+                    id="contactBtn"
                 >
-
-                <h2>
-                    Dessert Shop
-                </h2>
+                    Nous contacter
+                </button>
 
             </div>
 
-
-            <p>
-                De délicieux desserts préparés avec passion.
-            </p>
+        </div>
 
 
-            <div class="footer-links">
+        <div class="footer-bottom">
 
-                <a href="#">
-                    Accueil
-                </a>
+            <div class="container">
 
-                <a href="#app-produits">
-                    Desserts
-                </a>
+                <p>
+                    © <span id="currentYear"></span>
+                    DEVACADEMY. Tous droits réservés.
+                </p>
 
-                <a href="#section-panier">
-                    Panier
-                </a>
-
-                <a href="#">
-                    Contact
-                </a>
-
-            </div>
-
-
-            <div class="footer-bottom">
-
-                © 2026 Dessert Shop — Tous droits réservés.
+                <p>
+                    Learning. Coding. Building.
+                </p>
 
             </div>
 
@@ -841,12 +1551,489 @@
     </footer>
 
 
-    <!-- =====================================
-         JAVASCRIPT
-    ====================================== -->
+    <!-- ================= LOGIN MODAL ================= -->
 
-    <script src="js/script.js"></script>
+    <div class="modal" id="loginModal">
+
+        <div class="modal-overlay"></div>
+
+        <div class="modal-content">
+
+            <button class="modal-close" data-close="loginModal">
+                ×
+            </button>
+
+            <div class="modal-header">
+
+                <span class="modal-icon">
+                    DEV
+                </span>
+
+                <h2>
+                    Connexion
+                </h2>
+
+                <p>
+                    Connecte-toi à ton espace DEVACADEMY.
+                </p>
+
+            </div>
+
+
+            <form id="loginForm">
+
+                <div class="form-group">
+
+                    <label for="loginEmail">
+                        Email
+                    </label>
+
+                    <input
+                        type="email"
+                        id="loginEmail"
+                        placeholder="exemple@email.com"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="loginPassword">
+                        Mot de passe
+                    </label>
+
+                    <input
+                        type="password"
+                        id="loginPassword"
+                        placeholder="Votre mot de passe"
+                        required
+                    >
+
+                </div>
+
+
+                <button
+                    type="submit"
+                    class="btn btn-primary form-submit"
+                >
+                    Se connecter
+                </button>
+
+            </form>
+
+
+            <p class="modal-switch">
+
+                Pas encore inscrit ?
+
+                <button id="switchToRegister">
+                    Créer un compte
+                </button>
+
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <!-- ================= REGISTER MODAL ================= -->
+
+    <div class="modal" id="registerModal">
+
+        <div class="modal-overlay"></div>
+
+        <div class="modal-content">
+
+            <button class="modal-close" data-close="registerModal">
+                ×
+            </button>
+
+            <div class="modal-header">
+
+                <span class="modal-icon">
+                    DEV
+                </span>
+
+                <h2>
+                    Créer un compte
+                </h2>
+
+                <p>
+                    Rejoins DEVACADEMY gratuitement.
+                </p>
+
+            </div>
+
+
+            <form id="registerForm">
+
+                <div class="form-group">
+
+                    <label for="registerName">
+                        Nom complet
+                    </label>
+
+                    <input
+                        type="text"
+                        id="registerName"
+                        placeholder="Votre nom"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="registerEmail">
+                        Email
+                    </label>
+
+                    <input
+                        type="email"
+                        id="registerEmail"
+                        placeholder="exemple@email.com"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="registerPassword">
+                        Mot de passe
+                    </label>
+
+                    <input
+                        type="password"
+                        id="registerPassword"
+                        placeholder="Minimum 6 caractères"
+                        minlength="6"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="registerLevel">
+                        Niveau
+                    </label>
+
+                    <select id="registerLevel" required>
+
+                        <option value="">
+                            Sélectionner votre niveau
+                        </option>
+
+                        <option value="Débutant">
+                            Débutant
+                        </option>
+
+                        <option value="Intermédiaire">
+                            Intermédiaire
+                        </option>
+
+                        <option value="Avancé">
+                            Avancé
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <button
+                    type="submit"
+                    class="btn btn-primary form-submit"
+                >
+                    Créer mon compte
+                </button>
+
+            </form>
+
+
+            <p class="modal-switch">
+
+                Déjà inscrit ?
+
+                <button id="switchToLogin">
+                    Se connecter
+                </button>
+
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <!-- ================= COURSE MODAL ================= -->
+
+    <div class="modal" id="courseModal">
+
+        <div class="modal-overlay"></div>
+
+        <div class="modal-content course-modal-content">
+
+            <button class="modal-close" data-close="courseModal">
+                ×
+            </button>
+
+            <span class="course-modal-tag">
+                FORMATION
+            </span>
+
+            <h2 id="courseModalTitle">
+                JavaScript
+            </h2>
+
+            <p id="courseModalDescription">
+                Description du cours.
+            </p>
+
+            <div class="course-modal-info">
+
+                <div>
+                    <strong id="courseLessons">24</strong>
+                    <span>Leçons</span>
+                </div>
+
+                <div>
+                    <strong>Pratique</strong>
+                    <span>Exercices</span>
+                </div>
+
+                <div>
+                    <strong>Projet</strong>
+                    <span>Final</span>
+                </div>
+
+            </div>
+
+            <button
+                class="btn btn-primary form-submit"
+                id="modalStartCourse"
+            >
+                Commencer cette formation
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <!-- ================= QUIZ MODAL ================= -->
+
+    <div class="modal" id="quizModal">
+
+        <div class="modal-overlay"></div>
+
+        <div class="modal-content quiz-modal-content">
+
+            <button class="modal-close" data-close="quizModal">
+                ×
+            </button>
+
+            <div class="quiz-progress">
+
+                <span id="quizQuestionNumber">
+                    Question 1 / 5
+                </span>
+
+                <div class="progress-track">
+                    <div
+                        class="progress-fill"
+                        id="quizProgress"
+                        style="width:20%"
+                    ></div>
+                </div>
+
+            </div>
+
+
+            <div id="quizContent">
+
+                <h2 id="quizQuestion">
+                    Que signifie HTML ?
+                </h2>
+
+                <div
+                    class="quiz-options"
+                    id="quizOptions"
+                ></div>
+
+            </div>
+
+
+            <div
+                class="quiz-result"
+                id="quizResult"
+            >
+
+                <div class="result-score">
+                    <span id="quizScore">
+                        0
+                    </span>
+                    / 5
+                </div>
+
+                <h2>
+                    Quiz terminé
+                </h2>
+
+                <p id="quizResultText">
+                    Voici ton résultat.
+                </p>
+
+                <button
+                    class="btn btn-primary"
+                    id="restartQuiz"
+                >
+                    Recommencer
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- ================= CONTACT MODAL ================= -->
+
+    <div class="modal" id="contactModal">
+
+        <div class="modal-overlay"></div>
+
+        <div class="modal-content">
+
+            <button class="modal-close" data-close="contactModal">
+                ×
+            </button>
+
+            <div class="modal-header">
+
+                <span class="modal-icon">
+                    DEV
+                </span>
+
+                <h2>
+                    Nous contacter
+                </h2>
+
+                <p>
+                    Envoie-nous ton message.
+                </p>
+
+            </div>
+
+
+            <form id="contactForm">
+
+                <div class="form-group">
+
+                    <label for="contactName">
+                        Nom
+                    </label>
+
+                    <input
+                        type="text"
+                        id="contactName"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="contactEmail">
+                        Email
+                    </label>
+
+                    <input
+                        type="email"
+                        id="contactEmail"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="contactMessage">
+                        Message
+                    </label>
+
+                    <textarea
+                        id="contactMessage"
+                        rows="5"
+                        required
+                    ></textarea>
+
+                </div>
+
+
+                <button
+                    type="submit"
+                    class="btn btn-primary form-submit"
+                >
+                    Envoyer le message
+                </button>
+
+            </form>
+
+        </div>
+
+    </div>
+
+
+    <!-- ================= TOAST ================= -->
+
+    <div
+        class="toast"
+        id="toast"
+    >
+        <div class="toast-icon">
+            OK
+        </div>
+
+        <div>
+            <strong id="toastTitle">
+                Notification
+            </strong>
+
+            <p id="toastMessage">
+                Message
+            </p>
+        </div>
+
+        <button id="closeToast">
+            ×
+        </button>
+
+    </div>
+
+
+    <!-- ================= BACK TO TOP ================= -->
+
+    <button
+        class="back-to-top"
+        id="backToTop"
+        aria-label="Retour en haut"
+    >
+        ↑
+    </button>
+
+
+    <script src="script.js"></script>
 
 </body>
-
 </html>
